@@ -7,20 +7,19 @@ const newQuoteBtn = document.getElementById('new-quote')
 const loader = document.getElementById('loader')
 
 let apiQuotes = []
+let newQuote = {}
 let apiQuotesAvailable = false
 
-// Loading Animation
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
-function hideLoading() {
+function hideLoadingSpinner() {
     quoteContainer.hidden = false;
     loader.hidden = true;
 }
 
-// Select New Quote
 function useLocalQuote() {
     let newQuote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
     return newQuote;
@@ -31,12 +30,9 @@ function useApiQuote() {
     return newQuote;
 }
 
-// Dynamically Write New Quote
 function writeNewQuote() {
-    loading()
+    showLoadingSpinner()
 
-    // Retrieve new quote from either local or api list
-    newQuote = {}
     if (apiQuotesAvailable === true) {
         newQuote = useApiQuote();
     }
@@ -44,15 +40,15 @@ function writeNewQuote() {
         newQuote = useLocalQuote();
     };
 
-    // Populate quote container
     authorText.textContent = newQuote.author;
     quoteText.textContent = newQuote.text;
-    hideLoading()
+
+    hideLoadingSpinner()
 }
 
-// Get Quotes from API
-async function getQuotes() {
+async function downloadQuotesFromApi() {
     const apiUrl = 'https://type.fit/api/quotes';
+
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json()
@@ -65,22 +61,20 @@ async function getQuotes() {
 
         apiQuotesAvailable = true
     } catch (error) {
-        console.log("Error in getQuotes: ", error)
+        console.log("Error in downloadQuotesFromApi: ", error)
         console.log("Using local quotes only.")
     }
 }
 
-// Tweet Quote
 function tweetQuote() {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
 
     window.open(twitterUrl, '_blank');
 }
 
-// Event Listeners
 newQuoteBtn.addEventListener('click', writeNewQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
-// On Load
+// On Load - Show a locally stored quote first for speed, and download API quotes in background
 writeNewQuote();
-getQuotes();
+downloadQuotesFromApi();
