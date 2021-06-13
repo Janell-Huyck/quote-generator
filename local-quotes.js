@@ -61,15 +61,15 @@ const localQuotes = [
   },
   {
     text: 'Today is the tomorrow we worried about yesterday.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: "It's easier to see the mistakes on someone else's paper.",
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Every man dies. Not every man really lives.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'To lead people walk behind them.',
@@ -105,7 +105,7 @@ const localQuotes = [
   },
   {
     text: 'The day is already blessed, find peace within it.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'From error to error one discovers the entire truth.',
@@ -141,7 +141,7 @@ const localQuotes = [
   },
   {
     text: 'From small beginnings come great things.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Learning is a treasure that will follow its owner everywhere',
@@ -329,11 +329,11 @@ const localQuotes = [
   },
   {
     text: 'It takes both sunshine and rain to make a rainbow.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'A beautiful thing is never perfect.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Only do what your heart tells you.',
@@ -381,7 +381,7 @@ const localQuotes = [
   },
   {
     text: 'Every new day is another chance to change your life.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Smile, breathe, and go slowly.',
@@ -401,7 +401,7 @@ const localQuotes = [
   },
   {
     text: 'Some pursue happiness, others create it.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'He that is giddy thinks the world turns round.',
@@ -417,7 +417,7 @@ const localQuotes = [
   },
   {
     text: 'We do what we do because we believe.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Do one thing every day that scares you.',
@@ -445,7 +445,7 @@ const localQuotes = [
   },
   {
     text: 'The harder you fall, the higher you bounce.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Trusting our intuition often saves us from disaster.',
@@ -473,7 +473,7 @@ const localQuotes = [
   },
   {
     text: 'Everyone smiles in the same language.',
-    author: null,
+    author: "Unknown",
   },
   {
     text: 'Yesterday I dared to struggle. Today I dare to win.',
@@ -545,6 +545,6 @@ const localQuotes = [
   },
   {
     text: "You can do what's reasonable or you can decide what's possible.",
-    author: null,
+    author: "Unknown",
   },
 ];
